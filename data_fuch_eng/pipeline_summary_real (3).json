@@ -1,0 +1,23 @@
+{
+  "run_timestamp": "2026-06-07T10:49:50.768797",
+  "data_source": "real",
+  "total_customers": 10000,
+  "active_accounts": 1354,
+  "inoperative_accounts": 968,
+  "dormant_accounts": 7678,
+  "avg_clv_predicted": 70081.75,
+  "high_churn_risk_customers": 7677,
+  "model_metrics": {
+    "clv": {
+      "rmse": 3416.039380404363,
+      "mae": 1044.3733772109374,
+      "mape": 1.4529638028117495
+    },
+    "churn": {
+      "auc_roc": 0.9999915813577586,
+      "f1": 0.9990231195050472,
+      "precision": 0.9993485342019544,
+      "recall": 0.9986979166666666
+    }
+  }
+}
