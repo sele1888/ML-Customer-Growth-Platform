@@ -46,7 +46,7 @@ st.markdown("""
         padding-top: 2rem;
     }
     .metric-card {
-        background-color: #f0f2f6;
+        background-color: f0f2f6;
         padding: 1.5rem;
         border-radius: 0.5rem;
         margin: 0.5rem 0;
@@ -70,6 +70,7 @@ st.markdown("""
         border-left: 4px solid #dc3545;
     }
     </style>
+            
 """, unsafe_allow_html=True)
 
 # ═══════════════════════════════════════════════════════════════════════════
@@ -332,8 +333,16 @@ def create_eda_dashboard(df: pd.DataFrame, out_path: str = "outputs_real/eda_das
 # ═══════════════════════════════════════════════════════════════════════════
 # SIDEBAR NAVIGATION
 # ═══════════════════════════════════════════════════════════════════════════
-st.sidebar.title("🏦  AI Driven Customer and Product Growth Optimization Platform")
-st.sidebar.markdown("---")
+# st.sidebar.title("🏦  AI Driven Customer and Product Growth Optimization Platform")
+
+with st.sidebar:
+    st.sidebar.image(r"D:\ML-Customer-Growth-Platform\ML-Customer-Growth-Platform\imag\logo.png", width=170)
+    st.markdown("""
+    <h2 style='text-align:center; color:black;'>
+    AI Driven Customer and Product Growth Optimization Platform
+    </h2>
+    <hr>
+    """, unsafe_allow_html=True)
 
 page = st.sidebar.radio(
     "Select Module",
@@ -347,15 +356,16 @@ page = st.sidebar.radio(
     ]
 )
 
+
 st.sidebar.markdown("---")
 st.sidebar.info(
     "🔬 **AI-Driven Customer & Product Growth Optimization**\n\n"
     "This platform uses machine learning to:\n"
-    "• Predict customer lifetime value (CLV)\n"
-    "• Identify churn risk\n"
-    "• Detect dormancy patterns\n"
-    "• Recommend next best products\n"
-    "• Drive re-engagement campaigns"
+    " Predict customer lifetime value (CLV)\n"
+    " Identify churn risk\n"
+    "Detect dormancy patterns\n"
+    " Recommend next best products\n"
+    " Drive re-engagement campaigns"
 )
 
 regions, products = get_regions_and_products(df)
@@ -585,7 +595,7 @@ elif page == "⚠️ Churn Risk":
                         gauge={'axis': {'range': [None, 100]},
                                'bar': {'color': color},
                                'steps': [
-                                   {'range': [0, 30], 'color': "#d4edda"},
+                                   {'range': [0, 30], 'color': "#f7f0ef"},
                                    {'range': [30, 50], 'color': "#fff3cd"},
                                    {'range': [50, 70], 'color': "#ffe5e5"},
                                    {'range': [70, 100], 'color': "#f8d7da"}
@@ -1097,9 +1107,9 @@ st.markdown("---")
 st.markdown(
     """
     <div style='text-align: center'>
-    <p style='color: #666; font-size: 12px;'>
+    <p style='color: #28a745; font-size: 12px;'>
     🏦 Ahadu Bank AI Driven Customer & Product Growth Optimization Platform<br>
-    Powered by Machine Learning | © 2025
+    Powered by Machine Learning | © 2026 Ahadu Bank. All rights reserved.
     </p>
     </div>
     """,
